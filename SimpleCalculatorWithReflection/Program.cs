@@ -26,7 +26,7 @@ namespace SimpleCalculatorWithReflection
                 Console.Write("Ввеідть команду: ");
                 comands = Console.ReadLine();
 
-                //Перевірка на вірність команди
+                //Перевірка на правильність команди
                 if (comands == "+" || comands == "-" || comands == "*" || comands == "/")
                 {
                     VerificationOfOperation(comands, firstNum, secondNum);
@@ -38,7 +38,7 @@ namespace SimpleCalculatorWithReflection
             }
         }
         //Метод в котрому буде перевірятися котра імено команда була введена,
-        //та вивід резулятату на консоль.
+        //та вивід результату на консоль.
         static void VerificationOfOperation(string comand, int num1, int num2)
         {
             MethodInfo[] methods = typeof(Calculator).GetMethods();
